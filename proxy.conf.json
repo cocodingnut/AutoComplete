@@ -1,0 +1,10 @@
+{
+    "/api": {
+        "target": "http://suggestqueries.google.com",
+        "secure": false,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/api": ""
+        }
+    }
+}

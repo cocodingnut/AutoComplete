@@ -1,20 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from './shared/services/user.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AutocompleteComponent
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
